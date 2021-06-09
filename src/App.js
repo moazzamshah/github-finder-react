@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
 import Navbar from './components/layout/Navbar';
+import Users from './users/Users';
+// import UserItems from './users/UserItems';
 
 export class App extends Component {
   render() {
-
     return (
-      <div className = 'App'>
+      <div className='App'>
         <Navbar />
-        <h1> Hello From React </h1>
+        <div className='container'>
+          <Users />
+        </div>
       </div>
     );
   }

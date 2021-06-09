@@ -412,3 +412,9 @@ table th {
     justify-content: center;
   }
 }
+
+.userStyle {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
