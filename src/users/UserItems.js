@@ -21,7 +21,6 @@ const UserItems = ({ user: { login, avatar_url, html_url } }) => {
 
 UserItems.prototype = {
   user: PropTypes.object.isRequired,
-}
-
+};
 
 export default UserItems;
