@@ -30,11 +30,18 @@ export class App extends Component {
     this.setState({users: res.data.items, loading: false})
   }
 
+  // Clear Users function
+
+  clearUsers = () => this.setState({users: [], loading: false})
+
+
+
   render() {
     return (
       <div className='App'>
         <Navbar />
-        <Search searchUsers = {this.searchUsers} />
+        <Search searchUsers = {this.searchUsers} clearUsers={this.clearUsers}
+        showClear={this.state.users.length > 0 ? true : false} />
         <div className='container'>
         {/* here we are passing loading and users props into our user component  */}
           <Users loading={this.state.loading} users={this.state.users} />
